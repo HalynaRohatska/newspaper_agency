@@ -21,3 +21,14 @@ class Redactor(AbstractUser):
 
     def __str__(self):
         return f"{self.username} ({self.first_name} {self.last_name})"
+
+
+class Newspaper(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    published_date = models.DateField(auto_now_add=True)
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    redactors = models.ManyToManyField(Redactor, related_name="redactors")
+
+    def __str__(self):
+        return f"{self.title} ({self.published_date})"
