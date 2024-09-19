@@ -1,19 +1,21 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
+from newspaper_agency import settings
+
 
 class Topic(models.Model):
     name = models.CharField(max_length=255)
 
     class Meta:
-        ordering = ["name"]
+        ordering = ("name", )
 
     def __str__(self):
         return self.name
 
 
 class Redactor(AbstractUser):
-    years_of_experience = models.IntegerField()
+    years_of_experience = models.IntegerField(null=True, blank=True)
 
     class Meta:
         verbose_name = "redactor"
@@ -28,7 +30,10 @@ class Newspaper(models.Model):
     content = models.TextField()
     published_date = models.DateField(auto_now_add=True)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    redactors = models.ManyToManyField(Redactor, related_name="redactors")
+    redactors = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="redactors")
+
+    class Meta:
+        ordering = ("-published_date", )
 
     def __str__(self):
         return f"{self.title} ({self.published_date})"
