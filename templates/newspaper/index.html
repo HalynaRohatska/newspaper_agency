@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Newspaper agency Home</h1>
+    <ul>
+        <li><strong>Newspapers:</strong> {{ num_newspaper }}</li>
+        <li><strong>Redactors:</strong> {{ num_redactors }}</li>
+        <li><strong>Topics:</strong> {{ num_topic }}</li>
+    </ul>
+
+    <p>You have visited this page
+        {{ num_visits }} time{{ num_visits|pluralize }}.
+    </p>
+
+{% endblock %}
