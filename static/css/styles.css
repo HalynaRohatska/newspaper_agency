@@ -1,0 +1,95 @@
+:root {
+    --main-text-color: black;
+    --main-color: #f8f9fa;
+    --main-border-color: #1b1b1b;
+}
+
+body {
+    background-image: url("../images/newspapers.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--main-text-color);
+}
+
+a {
+    color: var(--main-text-color);
+}
+
+.position-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row-padding {
+    padding-top: 40px;
+    height: 100vh;
+}
+
+.title {
+    padding-bottom: 20px;
+}
+
+.title-main {
+    padding-top: 100px;
+}
+
+.wrap {
+    padding-bottom: 10px;
+}
+
+.position-card {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 20px;
+    width: 12rem;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-color);
+}
+
+.list-group-item {
+    background-color: inherit;
+    border: none;
+}
+
+.logout {
+    border: none;
+    background-color: inherit;
+}
+
+.page-link {
+    color: var(--main-text-color);
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: black;
+    background-color: var(--main-color);
+    border-color: var(--main-border-color);
+}
+
+.table {
+    font-weight: 800;
+}
+
+.newspaper-list li {
+    padding-bottom: 10px;
+}
+
+.newspaper-list li a{
+    font-weight: 700;
+    color: var(--main-text-color);
+}
+
+.update-color {
+    color: #003366;
+}
+
+.delete-color {
+    color: darkred;
+}
