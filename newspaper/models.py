@@ -30,10 +30,10 @@ class Newspaper(models.Model):
     content = models.TextField()
     published_date = models.DateField(auto_now_add=True)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    redactors = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="redactors")
+    redactors = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="newspapers")
 
     class Meta:
         ordering = ("-published_date", )
 
     def __str__(self):
-        return f"{self.title} ({self.published_date})"
+        return f"{self.title} ({self.content})"
