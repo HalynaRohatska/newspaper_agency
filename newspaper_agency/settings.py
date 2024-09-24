@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 LOGIN_REDIRECT_URL = "/newspaper/"
-LOGOUT_REDIRECT_URL = "/accounts/logged_out/"
+LOGOUT_REDIRECT_URL = "/accounts/logout/"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/

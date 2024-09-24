@@ -1,0 +1,296 @@
+[
+  {
+    "model": "newspaper.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Politics"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Science"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Technology"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Sports"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Health"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Entertainment"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 7,
+    "fields": {
+      "name": "Economics"
+    }
+  },
+  {
+    "model": "newspaper.topic",
+    "pk": 8,
+    "fields": {
+      "name": "Environment"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 1,
+    "fields": {
+      "username": "johndoe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "password": "pbkdf2_sha256$320000$randomhashvalue$morehashvalues",
+      "years_of_experience": 5,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "johndoe@newspaper.com",
+      "date_joined": "2022-01-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 2,
+    "fields": {
+      "username": "janesmith",
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "password": "pbkdf2_sha256$320000$randomhashvalue$morehashvalues",
+      "years_of_experience": 7,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "janesmith@newspaper.com",
+      "date_joined": "2021-06-15T12:30:00Z"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 3,
+    "fields": {
+      "username": "alicejohnson",
+      "first_name": "Alice",
+      "last_name": "Johnson",
+      "password": "pbkdf2_sha256$320000$randomhashvalue$morehashvalues",
+      "years_of_experience": 8,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "alicejohnson@newspaper.com",
+      "date_joined": "2020-03-10T14:45:00Z"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 4,
+    "fields": {
+      "username": "bobwilliams",
+      "first_name": "Bob",
+      "last_name": "Williams",
+      "password": "pbkdf2_sha256$320000$randomhashvalue$morehashvalues",
+      "years_of_experience": 4,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "bobwilliams@newspaper.com",
+      "date_joined": "2019-11-20T09:15:00Z"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 5,
+    "fields": {
+      "username": "evadavis",
+      "first_name": "Eve",
+      "last_name": "Davis",
+      "password": "pbkdf2_sha256$320000$randomhashvalue$morehashvalues",
+      "years_of_experience": 6,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "evadavis@newspaper.com",
+      "date_joined": "2021-05-05T08:30:00Z"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 6,
+    "fields": {
+      "username": "michaelbrown",
+      "first_name": "Michael",
+      "last_name": "Brown",
+      "password": "pbkdf2_sha256$320000$randomhashvalue$morehashvalues",
+      "years_of_experience": 9,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "michaelbrown@newspaper.com",
+      "date_joined": "2018-12-30T11:00:00Z"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 7,
+    "fields": {
+      "username": "sarahlee",
+      "first_name": "Sarah",
+      "last_name": "Lee",
+      "password": "pbkdf2_sha256$320000$randomhashvalue$morehashvalues",
+      "years_of_experience": 3,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "sarahlee@newspaper.com",
+      "date_joined": "2023-03-22T15:30:00Z"
+    }
+  },
+  {
+    "model": "newspaper.redactor",
+    "pk": 8,
+    "fields": {
+      "username": "jamesgreen",
+      "first_name": "James",
+      "last_name": "Green",
+      "password": "pbkdf2_sha256$320000$randomhashvalue$morehashvalues",
+      "years_of_experience": 6,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "jamesgreen@newspaper.com",
+      "date_joined": "2022-09-10T07:45:00Z"
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 1,
+    "fields": {
+      "title": "Tech News",
+      "content": "Latest news in technology.",
+      "published_date": "2023-09-10",
+      "topic": 3,
+      "redactors": [1, 3]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 2,
+    "fields": {
+      "title": "Political Roundup",
+      "content": "Overview of recent political events.",
+      "published_date": "2023-09-09",
+      "topic": 1,
+      "redactors": [2]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 3,
+    "fields": {
+      "title": "Science Daily",
+      "content": "Latest discoveries in science.",
+      "published_date": "2023-09-08",
+      "topic": 2,
+      "redactors": [3]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 4,
+    "fields": {
+      "title": "Sports Highlights",
+      "content": "Latest highlights from the world of sports.",
+      "published_date": "2023-09-07",
+      "topic": 4,
+      "redactors": [4]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 5,
+    "fields": {
+      "title": "Health Today",
+      "content": "Health tips and updates.",
+      "published_date": "2023-09-06",
+      "topic": 5,
+      "redactors": [5]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 6,
+    "fields": {
+      "title": "Entertainment Weekly",
+      "content": "Celebrity news and entertainment.",
+      "published_date": "2023-09-05",
+      "topic": 6,
+      "redactors": [2, 5]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 7,
+    "fields": {
+      "title": "Economic Trends",
+      "content": "The latest in economics and market trends.",
+      "published_date": "2023-09-04",
+      "topic": 7,
+      "redactors": [1, 4]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 8,
+    "fields": {
+      "title": "Environmental Watch",
+      "content": "Updates on environmental issues.",
+      "published_date": "2023-09-03",
+      "topic": 8,
+      "redactors": [6]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 9,
+    "fields": {
+      "title": "Global Politics",
+      "content": "International political developments.",
+      "published_date": "2023-09-02",
+      "topic": 1,
+      "redactors": [7]
+    }
+  },
+  {
+    "model": "newspaper.newspaper",
+    "pk": 10,
+    "fields": {
+      "title": "Future of Tech",
+      "content": "Emerging technologies and trends.",
+      "published_date": "2023-09-01",
+      "topic": 3,
+      "redactors": [1, 6]
+    }
+  }
+]
