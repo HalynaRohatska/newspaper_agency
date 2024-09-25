@@ -24,5 +24,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
-    path("newspaper/", include("newspaper.urls", namespace="newspaper")),
+    path("", include("newspaper.urls", namespace="newspaper")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
