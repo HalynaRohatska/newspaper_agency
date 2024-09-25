@@ -183,6 +183,22 @@
       "date_joined": "2022-09-10T07:45:00Z"
     }
   },
+    {
+    "model": "newspaper.redactor",
+    "pk": 9,
+    "fields": {
+      "username": "redactor",
+      "first_name": "Mona",
+      "last_name": "Lisa",
+      "password": "wse456zsx,
+      "years_of_experience": 15,
+      "is_superuser": false,
+      "is_staff": true,
+      "is_active": true,
+      "email": "monalisa@newspaper.com",
+      "date_joined": "2008-01-01T10:00:00Z"
+    }
+  },
   {
     "model": "newspaper.newspaper",
     "pk": 1,
