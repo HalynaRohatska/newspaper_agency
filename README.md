@@ -2,6 +2,15 @@
 
 A project for managing newspapers and editors, allowing tracking of publication topics and editor experience.
 
+## Test User
+
+To access the site as a test user, use the following credentials:
+
+- **Username**: test_user
+- **Password**: test_password
+
+This user has permissions to view the website and perform basic actions but does not have admin privileges.
+
 ## Models
 
 The project contains three main models:
