@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+  <h1 class="title title-main">Newspaper agency Home</h1>
+  
+  <div class="position-card">
+    <div class="card" style="width: 12rem;">
+      <div class="card-body">
+        <h3 class="card-title">{{ num_newspaper }} +</h3>
+        <h6 class="card-subtitle mb-2 text-muted">Newspapers</h6>
+      </div>
+    </div>
+    <div class="card" style="width: 12rem;">
+      <div class="card-body">
+        <h3 class="card-title">{{ num_redactors }} +</h3>
+        <h6 class="card-subtitle mb-2 text-muted">Redactors</h6>
+      </div>
+    </div>
+    <div class="card" style="width: 12rem;">
+      <div class="card-body">
+        <h3 class="card-title"> {{ num_topic }} +</h3>
+        <h6 class="card-subtitle mb-2 text-muted">Topics </h6>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

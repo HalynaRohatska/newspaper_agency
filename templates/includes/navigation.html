@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{% url 'newspaper:index' %}">Newspaper agency</a>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" href="{% url 'newspaper:index' %}">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="{% url 'newspaper:redactor-list' %}">Redactors</a>
+      <a class="nav-link" href="{% url 'newspaper:newspaper-list' %}">Newspaper</a>
+      <a class="nav-link" href="{% url 'newspaper:topic-list' %}">Topic</a>
+    </div>
+  </div>
+  {% if user.is_authenticated %}
+    <li class="list-group-item"><a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></li>
+    <li class="list-group-item">
+      <form  action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button class="logout" type="submit">Logout</button>
+      </form>
+    </li>
+  {% else %}
+    <li class="list-group-item">
+      <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <button class="logout" type="submit">Login</button>
+      </form>
+    </li>
+  {% endif %}
+</nav>

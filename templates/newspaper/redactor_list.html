@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <h1 class="title">
+    Redactor List
+  </h1>
+  <div class="wrap">
+    <a href="{% url 'newspaper:redactor-create' %}" class="btn btn-secondary link-to-page">
+      Create
+    </a>
+  </div>
+  
+  <form method="get" action="" class="form-inline">
+    {{ search_form|crispy }}
+    <input type="submit" value="🔍" class="btn btn-secondary">
+  </form>
+
+  <hr>
+
+  {% if redactor_list %}
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Years of experience</th>
+    </tr>
+  {% for redactor in redactor_list %}
+    <tr>
+      <td>{{ redactor.id }}</td>
+      <td>
+        <a class="update-color" 
+             href="{% url "newspaper:redactor-detail" pk=redactor.id %}"
+        >
+          {{ redactor.username }} 
+          {% if user == redactor %} (Me){% endif %}
+      </a>
+      </td>
+      <td>{{ redactor.first_name }}</td>
+      <td>{{ redactor.last_name }}</td>
+      <td>{{ redactor.years_of_experience }}</td>
+    </tr>
+  {% endfor %}
+
+  </table>
+  {% else %}
+    <p>There are no redactors in the service.</p>
+  {% endif %}
+{% endblock %}
