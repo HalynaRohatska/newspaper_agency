@@ -2,6 +2,10 @@
 
 A project for managing newspapers and editors, allowing tracking of publication topics and editor experience.
 
+## Link to project
+
+newspaper-agency-8eht.onrender.com
+
 ## Test User
 
 To access the site as a test user, use the following credentials:
