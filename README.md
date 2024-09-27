@@ -6,8 +6,8 @@ A project for managing newspapers and editors, allowing tracking of publication 
 
 To access the site as a test user, use the following credentials:
 
-- **Username**: test_user
-- **Password**: test_password
+- **Username**: testredactor
+- **Password**: plmokn951
 
 This user has permissions to view the website and perform basic actions but does not have admin privileges.
 
